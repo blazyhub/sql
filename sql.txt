@@ -9,7 +9,8 @@ CREATE TABLE employee (
     commission VARCHAR(10),
     PRIMARY KEY (empno)
 );
-
+create user 'user'@'localhost' identified by 'password';
+grant all privileges on *.* to 'user'@'localhost' ;
 insert into employee values('124','sagar','soft','567','789.90','12.9');
 insert into employee values(null,"",null,null,null);
 //2

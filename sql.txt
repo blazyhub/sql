@@ -1,0 +1,25 @@
+create database company;
+use comapany;
+CREATE TABLE employee (
+    empno INT(10) NOT NULL,
+    ename CHAR(12),
+    job CHAR(20),
+    mangerno INT(10),
+    sal INT(10),
+    commission VARCHAR(10),
+    PRIMARY KEY (empno)
+);
+
+insert into employee values('124','sagar','soft','567','789.90','12.9');
+insert into employee values(null,"",null,null,null);
+//2
+ alter table employee add comm dec(10);
+ alter table employee rename column job to work;
+update employee set work='gov'where empno=124;
+delete from employee where empno=124;
+//3
+select count(ename) from employee;
+select max(age) from employee;
+select min(age) from employee;
+select * from employee order by salaray;
+select salary,count(*) from employee group by salary;

@@ -14,7 +14,7 @@ grant all privileges on *.* to 'user'@'localhost' ;
 insert into employee values('124','sagar','soft','567','789.90','12.9');
 insert into employee values(null,"",null,null,null);
 //2
- alter table employee add comm dec(10);
+ alter table employee add column comm dec(10);
  alter table employee rename column job to work;
 update employee set work='gov'where empno=124;
 delete from employee where empno=124;
